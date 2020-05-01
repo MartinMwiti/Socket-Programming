@@ -48,7 +48,8 @@ def handle_client(conn, addr):
                 # break
 
             print (f"[{addr}] {msg}") # print the address of a client and the message they sent.
-        
+            conn.send("Msg received".encode(FORMAT)) # sending message to the client
+
         conn.close()  # close the connection
 
 
