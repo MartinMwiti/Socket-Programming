@@ -4,7 +4,7 @@ HEADER = 1024
 PORT = 9090
 FORMAT = 'utf-8'
 DISCONNECT_MESSAGE = "!DICONNECT"
-SERVER = "192.168.99.1"
+SERVER = socket.gethostbyname(socket.gethostname())   # "192.168.99.1"
 ADDR = (SERVER, PORT)
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
